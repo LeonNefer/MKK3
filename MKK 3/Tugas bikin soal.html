@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Perhitungan Nilai Akhir Siswa</title>
+</head>
+<body>
+
+    <h2>Hasil Penilaian Siswa</h2>
+
+    <script>
+
+       var nama = prompt("Masukkan Nama Siswa:", "Andi");
+       var nilaiTugas = prompt("Masukkan Nilai Tugas:", "80");
+       var nilaiUTS = prompt("Masukkan Nilai UTS:", "75");
+       var nilaiUAS = prompt("Masukkan Nilai UAS:", "90");
+
+       var nilaiAkhir = (nilaiTugas * 0.30) + (nilaiUTS * 0.30) + (nilaiUAS * 0.40);
+       var status = (nilaiAkhir >= 75) ? "LULUS" : "TIDAK LULUS";
+
+
+        console.log("Nama        : " + nama);
+        console.log("Nilai Akhir : " + nilaiAkhir);
+        console.log("Status      : " + status);
+        document.write("Nama : " + nama + "<br>");
+        document.write("Nilai Akhir : " + nilaiAkhir + "<br>");
+        document.write("Status : " + status + "<br>");
+    </script>
+
+</body>
+</html>

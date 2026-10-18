@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Kasir Simpel</title>
+</head>
+<body>
+
+    <h2>Nota Pembelian</h2>
+    <div id="output"></div>
+    <br>
+    <button onclick="window.print()">Print PDF</button>
+
+    <script>
+
+        let nama = prompt("Masukkan nama pembeli:", "Budi");
+        let harga = parseFloat(prompt("Masukkan harga barang (Rp):", "28000"));
+        let jumlah = parseInt(prompt("Masukkan jumlah barang:", "2"));
+
+        let totalBelanja = harga * jumlah;
+        let diskon = (totalBelanja >= 50000) ? totalBelanja * 0.1 : 0;
+        let totalBayar = totalBelanja - diskon;
+
+        console.log("Pembeli: " + nama);
+        console.log("Total Belanja: Rp" + totalBelanja);
+        console.log("Diskon: Rp" + diskon);
+        console.log("Total Bayar: Rp" + totalBayar);
+
+        document.getElementById("output").innerHTML = `
+            Pembeli : ${nama} <br>
+            Total Belanja : Rp${totalBelanja.toLocaleString('id-ID')} <br>
+            Diskon : Rp${diskon.toLocaleString('id-ID')} <br>
+            Total Bayar : Rp${totalBayar.toLocaleString('id-ID')}
+        `;
+    </script>
+
+</body>
+</html>

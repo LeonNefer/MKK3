@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Sepeda - Input Manual Internal JS</title>
+</head>
+<body>
+
+    <h2>Informasi Sepeda</h2>
+
+
+    <script>
+
+        function Sepeda(merk, jenis, warna) {
+            this.merk = merk;
+            this.jenis = jenis;
+            this.warna = warna;
+
+            this.getInformasi = function () {
+                return "Merk: " + this.merk + " | Jenis: " + this.jenis + " | Warna: " + this.warna;
+            };
+
+
+            this.tampilkanKeWeb = function () {
+                document.write("<p>" + this.getInformasi() + "</p>");
+            };
+        }
+
+
+        alert("Masukkan data untuk Sepeda Pertama:");
+        let merk1 = prompt("Masukkan Merk Sepeda 1:");
+        let jenis1 = prompt("Masukkan Jenis Sepeda 1:");
+        let warna1 = prompt("Masukkan Warna Sepeda 1:");
+
+
+        alert("Masukkan data untuk Sepeda Kedua:");
+        let merk2 = prompt("Masukkan Merk Sepeda 2:");
+        let jenis2 = prompt("Masukkan Jenis Sepeda 2:");
+        let warna2 = prompt("Masukkan Warna Sepeda 2:");
+
+
+        let sepeda1 = new Sepeda(merk1, jenis1, warna1);
+        let sepeda2 = new Sepeda(merk2, jenis2, warna2);
+
+
+        sepeda1.tampilkanKeWeb();
+        sepeda2.tampilkanKeWeb();
+    </script>
+
+</body>
+</html>
